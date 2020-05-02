@@ -11,7 +11,7 @@ You can find a working example how to use it with your own cluster
 go run examples/example.go -kubecontext=<your-kube-context>
 ```
 
-# Usage
+## Usage
 
 Passing nil in the service will try to build a kubernetes client in cluster.
 
@@ -27,3 +27,21 @@ kcontext := "my-example"
 svc := k8crud.NewService(&kcontext)
 ```
 
+## Development
+
+The library is currently compatible with golang version from 1.13+.
+
+Use a [minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) or [microk8](https://microk8s.io/) for local development with a Kubernetes cluster.
+
+The library uses Go modules so it can be located outside the Go path.
+
+```bash
+# Setup with extra tools
+make setup
+
+# Run linter for Go
+make lint
+
+# Run the example
+make example
+```
