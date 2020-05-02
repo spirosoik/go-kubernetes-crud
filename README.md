@@ -16,7 +16,7 @@ go run examples/example.go -kubecontext=<your-kube-context>
 Passing nil in the service will try to build a kubernetes client in cluster.
 
 ```go
-svc := k8crud.NewService(nil)
+svc := kubecrud.NewService(nil)
 
 ```
 
@@ -24,7 +24,7 @@ Passing the context you want  will try to build a kubernetes client for the prov
 
 ```go
 kcontext := "my-example"
-svc := k8crud.NewService(&kcontext)
+svc := kubecrud.NewService(&kcontext)
 ```
 
 ## Development
